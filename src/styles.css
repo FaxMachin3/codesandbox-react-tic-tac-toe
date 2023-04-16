@@ -1,0 +1,86 @@
+:root {
+  --size: 3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.game-container {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+}
+
+.board {
+}
+
+.board .top {
+  display: grid;
+}
+
+.board .mid {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.board .mid div {
+  padding: 10px;
+}
+
+.board .mid .reset-button {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.board .bottom {
+  position: relative;
+}
+
+.winner {
+  border-radius: 10px;
+  background-color: coral;
+  opacity: 0.5;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.cell-container {
+  padding: 10px;
+  border-radius: 10px;
+  height: 300px;
+  background-color: rgb(16, 177, 177);
+  width: 300px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(var(--size), 1fr);
+  grid-template-rows: repeat(var(--size), 1fr);
+}
+
+.cell {
+  user-select: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  display: grid;
+  cursor: pointer;
+  place-items: center;
+}
